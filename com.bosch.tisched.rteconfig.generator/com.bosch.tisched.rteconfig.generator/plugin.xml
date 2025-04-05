@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         id="com.bosch.tisched.rteconfig.generator"
+         point="org.eclipse.core.runtime.applications">
+      <application
+            cardinality="singleton-global"
+            thread="main"
+            visible="true">
+         <run
+               class="com.bosch.tisched.rteconfig.generator.RteConfigGenerator">
+         </run>
+      </application>
+   </extension>
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="com.bosch.tisched.rteconfig.generator"
+            name="rteconfgen">
+         <property
+               name="appName"
+               value="rteconfgen">
+         </property>
+      </product>
+   </extension>
+   <extension
+         point="org.eclipse.sphinx.emf.resourceScopeProviders">
+      <provider
+            class="com.bosch.tisched.rteconfig.generator.core.RteConfigResourceScopeProvider"
+            id="com.bosch.tisched.rteconfig.generator.resourcescopeprovider"
+            override="org.artop.aal.workspace.scoping.autosarProjectResourceScopeProvider">
+         <applicableFor
+               metaModelDescriptorIdPattern="org.artop.aal.autosar\d\w">
+         </applicableFor>
+      </provider>
+   </extension>
+   <extension
+         point="org.eclipse.sphinx.emf.metaModelServices">
+      <service
+            class="com.bosch.tisched.rteconfig.generator.service.AutosarProxyResolver"
+            id="com.bosch.tisched.rteconfig.generator.service"
+            type="org.eclipse.sphinx.emf.ecore.proxymanagement.IProxyResolverService">
+         <applicableFor
+               metaModelDescriptorIdPattern="org.artop.aal.autosar\d\w">
+         </applicableFor>
+      </service>
+   </extension>
+
+</plugin>

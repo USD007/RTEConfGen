@@ -1,0 +1,6 @@
+auto\ commit=true
+com.ibm.team.filesystem.ide.ui.prefs_show_with_no_changes=false
+com.ibm.team.filesystem.internal.rcp.ui.workitems.workflows.CommonReviewPage/MruComments/value0=Verification
+eclipse.preferences.version=1
+prefs_show_metronome_trim=true
+previous_ignore_patterns=\#*\n*$\n*.BAK\n*.Z\n*.bak\n*.elc\n*.ln\n*.log\n*.merge-left*\n*.merge-right*\n*.mine\n*.o\n*.obj\n*.olb\n*.old\n*.orig\n*.prej\n*.rej\n*.working\n*~\n,*\n.\#*\n.DS_Store\n.del-*\n.deployables\n.make.state\n.nse_depinfo\n.svn\nCVS.adm\nRCS\nRCSLOG\nSCCS\n_$*\n_svn\nsvn-commit*.tmp\n

@@ -1,0 +1,2 @@
+eclipse.preferences.version=1
+task-tag-projects-already-scanned=com.bosch.blueworx.mcs.codecompletion,com.bosch.blueworx.mcs.codecompletion.tests,com.bosch.blueworx.mcs.hover,com.bosch.blueworx.mcs.hover.tests,com.bosch.blueworx.mcs.hyperlink,com.bosch.blueworx.mcs.infotext,com.bosch.blueworx.mcs.infotext.tests,com.bosch.blueworx.mcs.util,com.bosch.blueworx.mcs.util.tests,com.bosch.ubk.bat.mcs.indexer,com.bosch.ubk.bat.mcs.indexer.tests,com.bosch.ubk.mcs.feature,com.bosch.ubk.mcs.feature.sdk,com.bosch.ubk.mcs.feature.tests,target

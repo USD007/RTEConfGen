@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration
+    status="info"
+    packages="com.bosch.tisched.rteconfig.generator.*">
+    <Appenders>
+        <Console
+            name="rteconfgenConsole"
+            target="SYSTEM_OUT">
+            <PatternLayout pattern="[%d{HH:mm:ss:SSS}] - %-5p - %m%n" />
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Root level="info">
+            <AppenderRef ref="rteconfgenConsole" />
+        </Root>
+    </Loggers>
+</Configuration>

@@ -1,0 +1,5 @@
+buildTypes=awb_1.5.x-sdk;ecuworx_2.5.x-sdk;ecuworx_2.4.x-sdk;ecuworx_2.3.x-sdk;ecuworx_2.2.x-sdk;ecuworx_2.1.x-sdk;ecuworx_1.2.x-sdk;nightly-sdk
+cbiTargetParserDir=\\\\bosch.com\\dfsrb\\DfsDE\\DIV\\XC\\Engineering\\x_domain\\EngineeringCommon\\PA1\\Prj\\EclipseDev\\Orion\\targetMappingFile.properties
+ciBuildsBaseDir=\\\\bosch.com\\dfsrb\\DfsDE\\DIV\\XC\\Engineering\\x_domain\\EngineeringCommon\\PA1\\Prj\\EclipseDev\\Orion
+eclConventionVersion=0.3.49
+eclipse.preferences.version=1

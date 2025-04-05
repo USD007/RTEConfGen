@@ -1,0 +1,9 @@
+//BuildQueryDisplayPreferences/default/BuildQueryColumnOrder=Status,State,BuildDefinition,Label,Progress,BuildEngineId,StartTime,TimeTaken,Tags,CompletionTime,EstimatedCompletionTime,Requestor,TimeInQueue
+//BuildQueryDisplayPreferences/default/BuildQueryColumnVisible/BuildEngineId=true
+//BuildQueryDisplayPreferences/default/BuildQueryColumnVisible/EstimatedCompletionTime=false
+//BuildQueryDisplayPreferences/default/BuildQueryColumnWidth/BuildDefinition=433
+//BuildQueryDisplayPreferences/default/BuildQueryColumnWidth/BuildEngineId=134
+//BuildQueryDisplayPreferences/default/BuildQueryColumnWidth/Progress=159
+//BuildQueryDisplayPreferences/default/BuildQueryColumnWidth/Tags=130
+com.ibm.team.build.internal.ui.helper.FileHelperSaveAsFilePath=C\:\\tmp
+eclipse.preferences.version=1

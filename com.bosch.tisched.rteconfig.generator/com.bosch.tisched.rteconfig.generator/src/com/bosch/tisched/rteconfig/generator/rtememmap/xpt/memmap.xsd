@@ -1,0 +1,54 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="TARGETS">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="TARGET" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="SHORT-NAME"/>
+              <xs:element type="xs:string" name="XPT-SECTION"/>
+              <xs:element name="GENERAL_KEYWORDS">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="PRAGMA_SECTION"/>
+                    <xs:element type="xs:string" name="SW_COMPONENT"/>
+                    <xs:element type="xs:string" name="OS_APPLICATION"/>
+                    <xs:element type="xs:string" name="BSW_MODULE_DESCRIPTION"/>
+                    <xs:element type="xs:string" name="OS_TASK_NAME_PATTERN"/>
+                    <xs:element type="xs:string" name="ALIGNMENT_OPERATOR_8BIT" minOccurs="0"/>
+                    <xs:element type="xs:string" name="ALIGNMENT_OPERATOR_BOOLEAN" minOccurs="0"/>
+                    <xs:element type="xs:string" name="ALIGNMENT_OPERATOR_16BIT" minOccurs="0"/>
+                    <xs:element type="xs:string" name="ALIGNMENT_OPERATOR_32BIT" minOccurs="0"/>
+                    <xs:element type="xs:string" name="ALIGNMENT_OPERATOR_64BIT" minOccurs="0"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="SECTIONS">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="SECTION" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="SHORT-NAME"/>
+                          <xs:element type="xs:string" name="OPTIONAL_KEYWORD_1" minOccurs="0"/>
+                          <xs:element type="xs:string" name="OPTIONAL_KEYWORD_2" minOccurs="0"/>
+                          <xs:element type="xs:string" name="INITIAL_KEYWORD_1"/>
+                          <xs:element type="xs:string" name="FINAL_KEYWORD_1" minOccurs="0"/>
+                          <xs:element type="xs:string" name="INITIAL_KEYWORD_2" minOccurs="0"/>
+                          <xs:element type="xs:string" name="LINKER_FLAG_KEYWORD" minOccurs="0"/>
+                          <xs:element type="xs:string" name="FINAL_KEYWORD_2" minOccurs="0"/>
+                          <xs:element type="xs:string" name="DEFAULT_INITIAL_KEYWORD_1" minOccurs="0"/>
+                          <xs:element type="xs:string" name="DEFAULT_INITIAL_KEYWORD_2" minOccurs="0"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

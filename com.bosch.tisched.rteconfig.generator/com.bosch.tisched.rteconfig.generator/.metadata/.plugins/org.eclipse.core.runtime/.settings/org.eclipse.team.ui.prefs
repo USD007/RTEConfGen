@@ -1,0 +1,8 @@
+eclipse.preferences.version=1
+org.eclipse.team.ui.first_time=false
+org.eclipse.team.ui.run_import_in_background_=true
+org.eclipse.team.ui.sychronizing_default_participant=org.eclipse.team.svn.ui.synchronize.update.SynchronizeModelParticipant
+org.eclipse.team.ui.sychronizing_default_participant_sec_id=1271425334120
+teamContentDescriptors/org.eclipse.core.resources.modelProvider/enabled=true
+teamContentDescriptors/org.eclipse.jdt.ui.modelProvider/enabled=true
+teamContentDescriptors/org.eclipse.team.svn.core.svnChangeSetModel/enabled=true

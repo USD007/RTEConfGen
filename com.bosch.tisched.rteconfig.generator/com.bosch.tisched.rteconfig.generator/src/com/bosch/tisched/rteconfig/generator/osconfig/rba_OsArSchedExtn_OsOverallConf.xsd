@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:complexType name="CONFType">
+		<xs:sequence>
+			<xs:element name="NAME" type="xs:string"/>
+			<xs:element name="OSCFG" type="OSCFGType"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="OS_APPLICATIONIDMAPPINGSType">
+		<xs:sequence>
+			<xs:element maxOccurs="unbounded" minOccurs="0" name="OS_APPLICATIONIDMAPPING" type="OS_APPLICATIONIDMAPPINGType"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="OS_APPLICATIONIDMAPPINGType">
+		<xs:sequence>
+			<xs:element name="CORENUMBER" type="OS_CORENUMBERType"/>
+			<xs:element name="OS_APPLICATIONID" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="OS_BSWMODULEINSTANCEType">
+		<xs:sequence>
+			<xs:element maxOccurs="1" minOccurs="0" name="OS_BSWIMPLEMENTATIONREF" type="xs:string"/>
+			<xs:element maxOccurs="unbounded" minOccurs="0" name="OS_APPLICATIONID" type="xs:string"/>
+			<xs:element name="OS_BSWMODULEINSTANCENAME" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="OS_COMPONENTINSTANCEType">
+		<xs:sequence>
+			<xs:element maxOccurs="1" minOccurs="0" name="OS_COMPONENTTYPEREF" type="xs:string"/>
+			<xs:element maxOccurs="1" minOccurs="0" name="OS_NOMEMMAPGEN" type="xs:boolean"/>
+			<xs:element maxOccurs="unbounded" minOccurs="0" name="OS_APPLICATIONID" type="xs:string"/>
+			<xs:element name="OS_INSTANCENAME" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="OS_EVENTType">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="instance" type="xs:string"/>
+				<xs:attribute name="offset" type="xs:string" use="optional"/>
+				<xs:attribute name="position" type="xs:string" use="optional"/>
+				<xs:attribute name="symbol" type="xs:string"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="OS_GENERALCFGType">
+		<xs:sequence>
+			<xs:element maxOccurs="1" minOccurs="0" name="TISCHED_VERSION" type="xs:string"/>
+			<xs:element name="MMDCS_COMPOSITIONPATH" type="xs:string"/>
+			<xs:element name="OS_MINISRPRIO" type="OS_PRIOBaseType"/>
+			<xs:element name="OS_MINPREEMPPRIO" type="OS_PRIOBaseType"/>
+			<xs:element name="TRIGGER_CONNECTION_AUTO" type="xs:boolean"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="OS_PROCESSType">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="event" type="xs:string" use="optional"/>
+				<xs:attribute name="instance" type="xs:string" use="optional"/>
+				<xs:attribute name="offset" type="xs:string" use="optional"/>
+				<xs:attribute name="position" type="xs:string" use="optional"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="OS_TASKCONTEXTType">
+		<xs:sequence>
+			<xs:choice maxOccurs="unbounded" minOccurs="0">
+				<xs:element name="OS_EVENT" type="OS_EVENTType"/>
+			</xs:choice>
+			<xs:element name="OS_TASKNAME" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="OS_TASKType">
+		<xs:sequence>
+			<xs:choice maxOccurs="unbounded" minOccurs="0">
+				<xs:element name="OS_EVENT" type="OS_EVENTType"/>
+				<xs:element name="OS_PROCESS" type="OS_PROCESSType"/>
+			</xs:choice>
+			<xs:element maxOccurs="1" minOccurs="0" name="OS_BSWRELEASEDTRIGGER" type="xs:string"/>
+			<xs:element maxOccurs="1" minOccurs="0" name="OS_CHAINTASK" type="xs:string"/>
+			<xs:element maxOccurs="1" minOccurs="0" name="OS_COOPTASK" type="xs:string"/>
+			<xs:element maxOccurs="1" minOccurs="0" name="OS_PPORTPROTOTYPE" type="xs:string"/>
+			<xs:element maxOccurs="1" minOccurs="0" name="OS_RTETASKHOOKS" type="xs:boolean"/>
+			<xs:element maxOccurs="1" minOccurs="0" name="OS_TASKCYCLE" type="xs:string"/>
+			<xs:element maxOccurs="1" minOccurs="0" name="OS_TASKEVENTTYPE" type="OS_TASKEVENTTYPEType"/>
+			<xs:element maxOccurs="1" minOccurs="0" name="OS_TSKMR" type="xs:string"/>
+			<xs:element maxOccurs="1" minOccurs="1" name="OS_APPLICATIONID" type="xs:string"/>
+			<xs:element maxOccurs="1" minOccurs="1" name="OS_TASKNAME" type="xs:string"/>
+			<xs:element maxOccurs="1" minOccurs="1" name="OS_TASKPRIORITY" type="OS_PRIOBaseType"/>
+			<xs:element maxOccurs="1" minOccurs="1" name="OS_TASKTYPE" type="OS_TASKTYPEType"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="OSCFGType">
+		<xs:choice maxOccurs="unbounded" minOccurs="0">
+			<xs:sequence>
+				<xs:element maxOccurs="unbounded" minOccurs="0" name="OS_BSWMODULEINSTANCE" type="OS_BSWMODULEINSTANCEType"/>
+				<xs:element maxOccurs="unbounded" minOccurs="0" name="OS_COMPONENTINSTANCE" type="OS_COMPONENTINSTANCEType"/>
+				<xs:element maxOccurs="unbounded" minOccurs="0" name="OS_TASK" type="OS_TASKType"/>
+				<xs:element name="OS_APPLICATIONIDMAPPINGS" type="OS_APPLICATIONIDMAPPINGSType"/>
+				<xs:element name="OS_GENERALCFG" type="OS_GENERALCFGType"/>
+			</xs:sequence>
+			<xs:sequence>
+				<xs:element maxOccurs="unbounded" minOccurs="0" name="OS_TASKCONTEXT" type="OS_TASKCONTEXTType"/>
+			</xs:sequence>
+		</xs:choice>
+	</xs:complexType>
+	<xs:element name="CONF" type="CONFType">
+		<xs:annotation>
+			<xs:documentation>
+				The only purpose of this file is to deliver OS config values to ICE/MCOP/EHOOKS/RESOURCE tool.
+			</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:simpleType name="OS_CORENUMBERType">
+		<xs:restriction base="xs:integer">
+			<xs:minInclusive value="0"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="OS_PRIOBaseType">
+		<xs:restriction base="xs:integer">
+			<xs:minInclusive value="0"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="OS_TASKEVENTTYPEType">
+		<!-- derived from rba_OsArSchedExtn_EventType -->
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="BG"/>
+			<xs:enumeration value="ETO"/>
+			<xs:enumeration value="I"/>
+			<xs:enumeration value="ITO"/>
+			<xs:enumeration value="T"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="OS_TASKTYPEType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="INIT"/>
+			<xs:enumeration value="ISR"/>
+			<xs:enumeration value="SOFTWARE"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

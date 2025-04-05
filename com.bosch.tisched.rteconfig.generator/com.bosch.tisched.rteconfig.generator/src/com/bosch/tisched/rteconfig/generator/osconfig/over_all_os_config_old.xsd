@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="CONF" type="CONFType">
+    <xs:annotation>
+      <xs:documentation>The only purpose of this file is to deliver OS config values to ICE/MCOP/EHOOKS/RESOURCE tool.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="OS_GENERALCFGType">
+    <xs:sequence>
+      <xs:element type="xs:byte" name="OS_MINISRPRIO"/>
+      <xs:element type="xs:byte" name="OS_MINPREEMPPRIO"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="OS_APPLICATIONIDMAPPINGType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="OS_APPLICATIONID"/>
+      <xs:element type="xs:byte" name="CORENUMBER"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="OS_APPLICATIONIDMAPPINGSType">
+    <xs:sequence>
+      <xs:element type="OS_APPLICATIONIDMAPPINGType" name="OS_APPLICATIONIDMAPPING" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="OS_PROCESSType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="instance" use="optional"/>
+        <xs:attribute type="xs:string" name="event" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="OS_EVENTType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="instance" use="optional"/>
+        <xs:attribute type="xs:string" name="event" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="OS_TASKType">
+  <xs:sequence>
+    <xs:element type="xs:string" name="OS_TASKNAME" maxOccurs="1" minOccurs="1"/>
+    <xs:element type="xs:string" name="OS_APPLICATIONID" maxOccurs="1" minOccurs="0"/>
+    <xs:element type="xs:string" name="OS_TASKTYPE" maxOccurs="1" minOccurs="0"/>
+    <xs:element type="xs:byte" name="OS_TASKPRIORITY" maxOccurs="1" minOccurs="0"/>
+    <xs:element type="xs:string" name="OS_TASKCYCLE" maxOccurs="1" minOccurs="0"/>
+    <xs:element type="xs:byte" name="OS_TSKMR" maxOccurs="1" minOccurs="0"/>
+      <xs:choice maxOccurs="unbounded" minOccurs="0">
+          <xs:element type="OS_PROCESSType" name="OS_PROCESS" />
+          <xs:element type="OS_EVENTType" name="OS_EVENT"/>
+      </xs:choice>
+      </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="OS_COMPONENTINSTANCEType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="OS_INSTANCE"/>
+      <xs:element type="xs:string" name="OS_PATH"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="OSCFGType">
+    <xs:sequence>
+      <xs:element type="OS_GENERALCFGType" name="OS_GENERALCFG"/>
+      <xs:element type="OS_APPLICATIONIDMAPPINGSType" name="OS_APPLICATIONIDMAPPINGS"/>
+      <xs:element type="OS_TASKType" name="OS_TASK" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element type="OS_COMPONENTINSTANCEType" name="OS_COMPONENTINSTANCE" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CONFType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="NAME"/>
+      <xs:element type="OSCFGType" name="OSCFG"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

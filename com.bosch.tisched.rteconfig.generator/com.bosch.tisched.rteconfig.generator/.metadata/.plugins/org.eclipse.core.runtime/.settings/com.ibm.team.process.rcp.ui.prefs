@@ -1,0 +1,9 @@
+com.ibm.team.process.rcp.ui.RepositoryCreationPart/dialog/name/history0/value=rb-ubk-clm-02.de.bosch.com\:9443
+com.ibm.team.process.rcp.ui.RepositoryCreationPart/dialog/name/history2/value=rb-blueworx
+com.ibm.team.process.rcp.ui.RepositoryCreationPart/dialog/uri/history0/value=https\://rb-ubk-clm-02.de.bosch.com\:9443/ccm
+com.ibm.team.process.rcp.ui.RepositoryCreationPart/dialog/uri/history1/value=
+com.ibm.team.process.rcp.ui.RepositoryCreationPart/dialog/uri/history2/value=https\://rb-ubk-clm-10.de.bosch.com/ccm
+com.ibm.team.process.rcp.ui.RepositoryCreationPart/dialog/userId/history0/value=
+com.ibm.team.process.rcp.ui.RepositoryCreationPart/dialog/userId/history1/value=tml2si
+connectedProjectAreasMemento=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<connectedProjectAreas/>
+eclipse.preferences.version=1

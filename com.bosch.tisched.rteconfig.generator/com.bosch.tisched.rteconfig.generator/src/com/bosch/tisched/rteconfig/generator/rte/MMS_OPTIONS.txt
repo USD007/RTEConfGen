@@ -1,0 +1,5 @@
+--os-task-as-function=0
+--deviate-prefer-no-empty-executions=1
+--os-permit-extended-tasks=0
+--terminate-background-tasks
+--force-basic-tasks

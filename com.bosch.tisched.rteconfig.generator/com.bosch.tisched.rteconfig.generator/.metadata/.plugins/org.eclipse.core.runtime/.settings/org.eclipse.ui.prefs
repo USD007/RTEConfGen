@@ -1,0 +1,10 @@
+SHOW_MEMORY_MONITOR=true
+actionSet.initiallyHidden.com.instantiations.assist.eclipse.codeproMenu=true
+actionSet.initiallyHidden.com.instantiations.assist.eclipse.codeproMenu.audit=true
+actionSet.initiallyHidden.com.instantiations.assist.eclipse.codeproMenu.collaboration=true
+actionSet.initiallyHidden.com.instantiations.assist.eclipse.codeproMenu.dependency=true
+actionSet.initiallyHidden.com.instantiations.assist.eclipse.codeproMenu.doc=true
+actionSet.initiallyHidden.com.instantiations.assist.eclipse.codeproMenu.pluspak=true
+actionSet.initiallyHidden.com.instantiations.assist.eclipse.codeproMenu.test=true
+eclipse.preferences.version=1
+showIntro=false

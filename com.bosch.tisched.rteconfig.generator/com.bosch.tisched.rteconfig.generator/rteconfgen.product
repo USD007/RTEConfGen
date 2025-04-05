@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?pde version="3.5"?>
+
+<product name="rteconfgen" uid="rteconfgen" id="com.bosch.tisched.rteconfig.generator.product" application="com.bosch.tisched.rteconfig.generator" version="1.0.0.qualifier" useFeatures="false" includeLaunchers="true">
+
+   <configIni use="default">
+   </configIni>
+
+   <launcherArgs>
+      <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts
+      </vmArgsMac>
+   </launcherArgs>
+
+   <windowImages/>
+
+   <plugins>
+      <plugin id="com.bosch.blueworx.core"/>
+      <plugin id="com.bosch.blueworx.core.logging"/>
+      <plugin id="com.bosch.blueworx.core.project.config"/>
+      <plugin id="com.bosch.blueworx.core.project.persistence.provider"/>
+      <plugin id="com.bosch.blueworx.core.projecttype.detector"/>
+      <plugin id="com.bosch.blueworx.core.util"/>
+      <plugin id="com.bosch.blueworx.model.bluearx"/>
+      <plugin id="com.bosch.blueworx.model.core"/>
+      <plugin id="com.bosch.blueworx.ulc"/>
+      <plugin id="com.bosch.filesystem"/>
+      <plugin id="com.bosch.syscondevaluator"/>
+      <plugin id="com.bosch.tisched.rteconfig.generator"/>
+      <plugin id="com.bosch.ubk.bat.serializer"/>
+      <plugin id="com.bosch.ubk.wbp.toolusage.logger"/>
+      <plugin id="com.bosch.wbp.common.log.directory"/>
+      <plugin id="com.bosch.wbp.genfolder"/>
+      <plugin id="com.bosch.wbp.mdf"/>
+      <plugin id="com.bosch.wbp.mdf.nature.core"/>
+      <plugin id="com.bosch.wbp.patcher" fragment="true"/>
+      <plugin id="com.bosch.wbp.utils"/>
+      <plugin id="com.fasterxml.jackson.core.jackson-annotations"/>
+      <plugin id="com.fasterxml.jackson.core.jackson-core"/>
+      <plugin id="com.fasterxml.jackson.core.jackson-databind"/>
+      <plugin id="com.google.gson"/>
+      <plugin id="com.google.gson.addons"/>
+      <plugin id="com.google.guava"/>
+      <plugin id="com.google.inject"/>
+      <plugin id="com.ibm.icu"/>
+      <plugin id="com.oshi"/>
+      <plugin id="javax.activation"/>
+      <plugin id="javax.inject"/>
+      <plugin id="javax.xml"/>
+      <plugin id="org.antlr.runtime"/>
+      <plugin id="org.apache.commons.cli"/>
+      <plugin id="org.apache.commons.collections"/>
+      <plugin id="org.apache.commons.io"/>
+      <plugin id="org.apache.commons.lang"/>
+      <plugin id="org.apache.felix.scr"/>
+      <plugin id="org.apache.logging.log4j"/>
+      <plugin id="org.apache.xerces"/>
+      <plugin id="org.apache.xml.resolver"/>
+      <plugin id="org.artop.aal.autosar452"/>
+      <plugin id="org.artop.aal.common"/>
+      <plugin id="org.artop.aal.gautosar"/>
+      <plugin id="org.artop.aal.gautosar.services"/>
+      <plugin id="org.artop.aal.serialization"/>
+      <plugin id="org.artop.aal.workspace"/>
+      <plugin id="org.artop.eel.common"/>
+      <plugin id="org.artop.eel.serialization"/>
+      <plugin id="org.eclipse.core.commands"/>
+      <plugin id="org.eclipse.core.contenttype"/>
+      <plugin id="org.eclipse.core.expressions"/>
+      <plugin id="org.eclipse.core.filesystem"/>
+      <plugin id="org.eclipse.core.jobs"/>
+      <plugin id="org.eclipse.core.resources"/>
+      <plugin id="org.eclipse.core.runtime"/>
+      <plugin id="org.eclipse.core.variables"/>
+      <plugin id="org.eclipse.ecf"/>
+      <plugin id="org.eclipse.ecf.filetransfer"/>
+      <plugin id="org.eclipse.ecf.identity"/>
+      <plugin id="org.eclipse.emf.common"/>
+      <plugin id="org.eclipse.emf.ecore"/>
+      <plugin id="org.eclipse.emf.ecore.change"/>
+      <plugin id="org.eclipse.emf.ecore.edit"/>
+      <plugin id="org.eclipse.emf.ecore.xmi"/>
+      <plugin id="org.eclipse.emf.edit"/>
+      <plugin id="org.eclipse.emf.mapping"/>
+      <plugin id="org.eclipse.emf.transaction"/>
+      <plugin id="org.eclipse.emf.validation"/>
+      <plugin id="org.eclipse.emf.workspace"/>
+      <plugin id="org.eclipse.equinox.app"/>
+      <plugin id="org.eclipse.equinox.common"/>
+      <plugin id="org.eclipse.equinox.concurrent"/>
+      <plugin id="org.eclipse.equinox.ds"/>
+      <plugin id="org.eclipse.equinox.preferences"/>
+      <plugin id="org.eclipse.equinox.registry"/>
+      <plugin id="org.eclipse.osgi"/>
+      <plugin id="org.eclipse.osgi.services"/>
+      <plugin id="org.eclipse.osgi.util"/>
+      <plugin id="org.eclipse.sphinx.emf"/>
+      <plugin id="org.eclipse.sphinx.emf.workspace"/>
+      <plugin id="org.eclipse.sphinx.platform"/>
+      <plugin id="org.eclipse.xtend.lib"/>
+      <plugin id="org.eclipse.xtend.lib.macro"/>
+      <plugin id="org.eclipse.xtext.xbase.lib"/>
+      <plugin id="org.jdom"/>
+   </plugins>
+
+
+</product>
